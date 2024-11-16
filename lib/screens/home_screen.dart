@@ -18,8 +18,8 @@ class _HomeScreenState extends State<HomeScreen> {
     final response = await http.get(Uri.parse(apiUrl));
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      // Check the structure of the response to adjust the parsing logic if needed
-      return data['characters']; // Replace 'characters' with the correct key if different
+      
+      return data['characters']; 
     } else {
       throw Exception('Failed to load data');
     }
